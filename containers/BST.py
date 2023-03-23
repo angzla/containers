@@ -23,7 +23,6 @@ class BST(BinaryTree):
         if xs:
             self.insert_list(xs)
 
-
     def __repr__(self):
         '''
         Notice that in the BinaryTree class,
@@ -123,8 +122,6 @@ class BST(BinaryTree):
             else:
                 BST._insert(node.right, value)
 
-
-
     def insert_list(self, xs):
         '''
         Given a list xs, insert each element of xs into self.
@@ -170,8 +167,6 @@ class BST(BinaryTree):
         else:
             return BST._find(value, node.right)
 
-
-
     def find_smallest(self):
         '''
         Returns the smallest value in the tree.
@@ -206,7 +201,7 @@ class BST(BinaryTree):
             raise ValueError('Nothing in tree')
         else:
             return BST._find_largest(self.root)
-    
+
     @staticmethod
     def _find_largest(node):
         assert node is not None
@@ -277,4 +272,3 @@ class BST(BinaryTree):
         '''
         for x in xs:
             self.remove(x)
-
