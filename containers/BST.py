@@ -54,7 +54,7 @@ class BST(BinaryTree):
         yield node.value
         if node.right:
             yield from BST._iter_helper(node.right)
-    
+
     def __eq__(self, t2):
         '''
         This method checks to see if the contents of self and t2 are equal.

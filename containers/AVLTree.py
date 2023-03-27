@@ -57,7 +57,6 @@ class AVLTree(BST):
         else:
             return AVLTree._is_avl_satisfied(node.left) and AVLTree._is_avl_satisfied(node.right)
 
-
     @staticmethod
     def _left_rotate(node):
         '''
@@ -80,7 +79,6 @@ class AVLTree(BST):
         new.left = leftnode
 
         return new
-
 
     @staticmethod
     def _right_rotate(node):
@@ -129,7 +127,7 @@ class AVLTree(BST):
             BST.insert(self, value)
             while not self.is_avl_satisfied():
                 self.root = self.rebalance(self.root)
-    
+
     def rebalance(self, node):
         if node is None:
             return
@@ -139,7 +137,6 @@ class AVLTree(BST):
             node.left = self.rebalance(node.left)
             node.right = self.rebalance(node.right)
         return node
-
 
     @staticmethod
     def _rebalance(node):
