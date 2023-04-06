@@ -103,7 +103,6 @@ class Heap(BinaryTree):
             num = self.__len__()
             current = "{0:b}".format(num + 1)[1:]
             self.root = Heap._insert(self.root, value, current)
-        
         else:
             self.root = Node(value)
 
